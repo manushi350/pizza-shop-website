@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pizza Landing Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+    <a href="#" class="logo">Pizza Pie</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+	<li><a id="order-btn" href="#">Order Now</a></li>
+        <li>
+            <a  id="cart-icon">Cart (0)</a>
+            <ul id="cart-dropdown" class="cart-dropdown"></ul>
+        </li>
+        <div class="bx bx-moon" id="darkmode"></div>
+    </ul>
+</header>
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Pizza Taste</h1>
+            <h2>The tasty pizza of <br> your choice</h2>
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+        <div class="home-img">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80.png" alt="">
+        </div>
+    </section>
+	
+	 <!-- About -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg" alt="">
+        </div>
+        <div class="about-text">
+            <span><h2>About Us</h2></span>
+            <h3>We make good and <br> tasty pizzas</h3>
+            <p>Welcome to <b>Pizza Pie</b>, where pizza is more than just food—it’s a passion. Our journey started in a small, cozy kitchen with a love for experimenting with flavors and creating something truly special. What began as a weekend tradition of making pizzas for friends and family quickly blossomed into a full-fledged business dedicated to sharing the joy of authentic pizza with our community.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+    <div class="heading">
+        <span><h2>Menu</h2></span>
+        <h3>Tasty menu of the week</h3>
+    </div>
+    <div class="menu-container">
+        <div class="box" data-id="1" data-name="Farm Villa Pizza" data-price="250">
+            <div class="box-img">
+                <img src="https://cdn.uengage.io/uploads/5/image-123528-1726728787.jpeg" alt="">
+            </div>
+            <h2>Farm Villa Pizza</h2>
+            <h3>Tasty Food</h3>
+            <span>₹250</span>
+            <i class='bx bx-cart-alt' onclick="addItemToCart(this)"></i>
+        </div>
+        <div class="box" data-id="2" data-name="Burn To Hell Pizza" data-price="300">
+            <div class="box-img">
+                <img src="https://cdn.uengage.io/uploads/5/image-556334-1726728786.jpeg" alt="">
+            </div>
+            <h2>Burn To Hell Pizza</h2>
+            <h3>Tasty Food</h3>
+            <span>₹300</span>
+            <i class='bx bx-cart-alt' onclick="addItemToCart(this)"></i>
+        </div>
+	 <div class="box" data-id="3" data-name="Cheezy-7 Pizza" data-price="349">
+            <div class="box-img">
+                <img src="https://cdn.uengage.io/uploads/5/image-462226-1715686799.png" alt="">
+            </div>
+            <h2>Cheezy-7 Pizza</h2>
+            <h3>Tasty Food</h3>
+            <span>₹349</span>
+            <i class='bx bx-cart-alt' onclick="addItemToCart(this)"></i>
+        </div> 
+	<div class="box" data-id="4" data-name="Tropical Pizza" data-price="255">
+            <div class="box-img">
+                <img src="https://cdn.uengage.io/uploads/5/image-543257-1726728787.jpeg" alt="">
+            </div>
+            <h2>Tropical Pizza</h2>
+            <h3>Tasty Food</h3>
+            <span>₹255</span>
+            <i class='bx bx-cart-alt' onclick="addItemToCart(this)"></i>
+        </div> 
+	<div class="box" data-id="5" data-name="Vegas Treat Pizza" data-price="299">
+            <div class="box-img">
+                <img src="https://cdn.uengage.io/uploads/5/image-375134-1726728787.jpeg" alt="">
+            </div>
+            <h2>Vegas Treat Pizza</h2>
+            <h3>Tasty Food</h3>
+            <span>₹299</span>
+            <i class='bx bx-cart-alt' onclick="addItemToCart(this)"></i>
+        </div>
+	 <div class="box" data-id="6" data-name="Special Pizza" data-price="355">
+            <div class="box-img">
+                <img src="https://cdn.uengage.io/uploads/5/image-772773-1715596627.png" alt="">
+            </div>
+            <h2>Special Pizza</h2>
+            <h3>Tasty Food</h3>
+            <span>₹355</span>
+            <i class='bx bx-cart-alt' onclick="addItemToCart(this)"></i>
+        </div> 
+	<div class="box" data-id="7" data-name="Garlic Bread" data-price="120">
+            <div class="box-img">
+                <img src="https://cdn.uengage.io/uploads/5/image-855653-1715928613.png" alt="">
+            </div>
+            <h2>Garlic Bread</h2>
+            <h3>Tasty Food</h3>
+            <span>₹120</span>
+            <i class='bx bx-cart-alt' onclick="addItemToCart(this)"></i>
+        </div>
+        <div class="box" data-id="8" data-name="Stuffed Garlic Bread" data-price="165">
+            <div class="box-img">
+                <img src="https://cdn.uengage.io/uploads/5/image-175968-1715671347.png"alt="">
+            </div>
+            <h2>Stuffed Garlic Bread</h2>
+            <h3>Tasty Food</h3>
+            <span>₹165</span>
+            <i class='bx bx-cart-alt' onclick="addItemToCart(this)"></i>
+        </div>
+    </div>
+</section>
+
+    <!-- Service -->
+    <section class="services" id="services">
+        <div class="heading">
+            <span><h2>Services</h2></span>
+            <h3>We provide best food services</h3>
+        </div>
+
+        <div class="servives-container">
+            <!-- Box 1 -->
+            <div class="s-box">
+                <img src="https://images.pexels.com/photos/4393426/pexels-photo-4393426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.png" alt="">
+                <h3>Online Ordering</h3>
+                <p>You can easily place your order through our website. Browse our menu, customize your pizza, and order with just a few clicks—quick, convenient, and user-friendly.</p>
+            </div>
+            <!-- Box 2 -->
+            <div class="s-box">
+                <img src="https://images.pexels.com/photos/280453/pexels-photo-280453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.png" alt="">
+                <h3>Fresh Preparation</h3>
+                <p>Once your order is placed, we prepare your pizza fresh, using only the highest-quality ingredients to ensure you get the best every time.</p>
+            </div>
+            <!-- Box 3 -->
+            <div class="s-box">
+                <img src="https://images.pexels.com/photos/4391470/pexels-photo-4391470.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.png" alt="">
+                <h3>Reliable Delivery</h3>
+                <p>Our delivery team ensures your pizza arrives hot, fresh, and right on time. We’re committed to providing fast and reliable service to satisfy your cravings.</p>
+            </div>
+        </div>
+    </section>
+<!-- Feedback Form -->
+<section class="feedback" id="feedback">
+    <div class="heading">
+        <span><h2>Feedback</h2></span>
+        <h3>Share your thoughts with us</h3>
+    </div>
+    <form id="feedback-form" class="feedback-form" action="feedback.php" method="post">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Your Name Here:" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Your E-mail Here:" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number Here:" required>
+    </div>
+    <div class="form-group">
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" placeholder="Enter Any Feedback For us:" required></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</section>
+
+    <!-- Connect -->
+    <section class="connect">
+        <div class="connect-text">
+            <span>Let's Talk</span>
+            <h2>Connect now</h2>
+        </div>
+        <a href="#" class="btn">Contact Us</a>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-box">
+            <h3>Pizza Pie</h3>
+            <span>Connect With Us</span>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+        <div class="contact-box">
+            <h3>Menu Links</h3>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </div>
+        <div class="contact-box">
+            <h3>Quick Links</h3>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Privacy Policy">Privacy Policy</a></li>
+            <li><a href="#Disclaimer">Disclaimer</a></li>
+            <li><a href="#Terms Of Use">Terms Of Use</a></li>
+        </div>
+        <div class="contact-box address">
+            <h3>Contact</h3>
+            <i class='bx bxs-map' ><span>Pizza Pie, Shop 5, Axiom 2, Near Iscon Platinum, Sardar Patel Ring Road, Bopal, Ahmedabad, Gujarat 380058, India</span></i>
+            <i class='bx bxs-phone' ><span>+91 000 999 5555</span></i>
+            <i class='bx bxs-envelope' ><span>PizzaPie@email.com</span></i>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© All Right Reserved.</p>
+    </div>
+
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link To JavaScript -->
+    <script src="patel.js"></script>
+</body>
+</html>
