@@ -49,7 +49,7 @@ Pizza-Shop-Website
 ├── README.md
 ⚙️ How to Run the Project
 1️⃣ Download or Clone the Repository
-git clone https://github.com/your-username/pizza-shop-website.git
+git clone https://github.com/manushi350/pizza-shop-website.git
 2️⃣ Open the Project
 
 Open the project folder in VS Code or any code editor.
